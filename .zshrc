@@ -5,7 +5,10 @@ alias editi3='vim ~/.config/i3/config'
 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
+if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
+    startx
+fi
 
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+    source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
