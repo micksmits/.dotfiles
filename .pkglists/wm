@@ -1,0 +1,12 @@
+nvidia
+nvidia-settings
+xorg-server
+xorg-xinit
+xorg-randr
+i3-gaps
+kitty
+alsa-util
+pulseaudio
+pavucontrol
+rofi
+lxappearance
