@@ -1,7 +1,5 @@
 alias dgit='git --git-dir ~/.dotfiles/.git --work-tree=$HOME'
-alias php='php7'
-alias ls='ls --color=auto'
-alias editi3='vim ~/.config/i3/config'
+alias ls='ls -la --color=auto'
 
 export PATH="$PATH:$HOME/.config/composer/vendor/bin"
 
@@ -12,3 +10,4 @@ fi
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
     source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
+
