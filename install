@@ -1,0 +1,24 @@
+#!/usr/bin/env zsh
+
+STOW_FOLDERS="i3,vim,ssh,zsh"
+DOTFILES=$HOME/.dotfiles
+
+pushd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    stow -D $folder
+done
+popd
+
+pushd $HOME
+rm -rf .z*
+curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+rm -rf .zimrc .zshrc .zlogin
+popd
+
+pushd $DOTFILES
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+    stow $folder
+done
+popd
