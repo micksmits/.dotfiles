@@ -7,3 +7,6 @@
 [submodule "ssh"]
 	path = ssh
 	url = git@github.com:micksmits/ssh.git
+[submodule "vim/.vim/bundle/ctrlp.vim"]
+	path = vim/.vim/bundle/ctrlp.vim
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
