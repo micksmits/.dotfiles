@@ -15,6 +15,7 @@ brew "via"
 brew "postman"
 brew "tableplus"
 brew "appcleaner"
+brew "ag"
 brew "mas"
 
 mas "Logic Pro", id: 634148309
