@@ -17,6 +17,12 @@ rm -rf .zimrc .zshrc .zlogin
 popd
 
 pushd $DOTFILES
+which -s brew
+if [[ $? != 0 ]] ; then
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  brew bundle install
+fi
+
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
     stow $folder
