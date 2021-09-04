@@ -1,4 +1,3 @@
-" Set basic settings
 set nowrap
 set nu
 set relativenumber
@@ -24,35 +23,14 @@ set colorcolumn=80
 set formatoptions-=cro
 set re=0
 
-call plug#begin('~/.vim/plugged')
-" File navigation
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+execute pathogen#infect()
+syntax on
+filetype plugin indent on
 
-" Testing
-Plug 'vim-test/vim-test'
-
-" Themes
-Plug 'morhetz/gruvbox'
-
-" Codelinting and autocomplete
-Plug 'dense-analysis/ale'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-call plug#end()
-
-" Set colors
 colorscheme gruvbox
 set background=dark
 
-" Maps & remaps
 let mapleader=" "
-nnoremap <C-p> :GFiles --cached --others<CR>
-nnoremap <C-g> :Ag<CR>
-nmap <silent> gd <Plug>(coc-definition)
-
-" Plugin settings
-let g:ale_lint_on_text_changed='always'
-let g:fzf_layout = {'window': {'width': 1, 'height': 0.4, 'yoffset': 1, 'border': 'none'}}
 
 fun! TrimWhitespace()
   let l:save = winsaveview()
