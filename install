@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+xcode-select --install
+
 STOW_FOLDERS="git,config,vim,ssh,zsh"
 DOTFILES=$HOME/.dotfiles
 
