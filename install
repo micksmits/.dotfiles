@@ -30,7 +30,7 @@ if ! which brew > /dev/null; then
   brew update
 fi;
 
-brew bundle
+brew bundle --no-lock
 
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
