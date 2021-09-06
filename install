@@ -1,8 +1,6 @@
 #!/usr/bin/env zsh
 
-xcode-select --install
-
-STOW_FOLDERS="git,config,vim,ssh,zsh"
+STOW_FOLDERS="git,config,vim,zsh"
 DOTFILES=$HOME/.dotfiles
 
 pushd $DOTFILES
@@ -10,24 +8,29 @@ for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
   echo "Removing symlink(s) for $folder"
   stow -D $folder
+  rm -rf .*.zwc
 done
 popd
 
 pushd $HOME
 mkdir Code
-echo "Installing zimfw"
-rm -rf .z*
-curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
-rm -rf .zimrc .zshrc .zlogin .*.zwc
+if ! which brew > /dev/null; then
+  echo "Installing zimfw"
+  rm -rf .z*
+  curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+  zimfw install
+  rm -rf .zimrc .zshrc .zlogin .*.zwc
+fi;
 popd
 
 pushd $DOTFILES
-which -s brew
-if [[ $? != 0 ]] ; then
-  echo "Installing Homebrew and apps"
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  brew bundle install
-fi
+if ! which brew > /dev/null; then
+  echo "Installing Homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+fi;
+
+brew bundle
 
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
