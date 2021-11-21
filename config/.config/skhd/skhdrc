@@ -1,0 +1,4 @@
+cmd - return : open -a Terminal
+cmd - 0x1E : open -a Safari
+cmd - 0x21 : open -a Webstorm
+
