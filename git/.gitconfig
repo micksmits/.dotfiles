@@ -1,7 +1,0 @@
-[user]
-  name = micksmits
-  email = micksmits96@gmail.com
-[pull]
-  rebase = false
-[init]
-  defaultBranch = main
