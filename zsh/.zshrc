@@ -1,3 +1,4 @@
+ZIM_HOME=~/.zim
 # Remove older command from the history if a duplicate is to be added.
 setopt HIST_IGNORE_ALL_DUPS
 
@@ -55,4 +56,4 @@ bindkey -M vicmd 'j' history-substring-search-down
 
 alias ls='ls -la'
 export PATH="$PATH:$HOME/.composer/vendor/bin"
-
+export PATH="$PATH:/usr/local/opt/node@16/bin"
