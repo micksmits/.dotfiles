@@ -13,7 +13,6 @@ done
 popd
 
 pushd $HOME
-mkdir Code
 if ! which brew > /dev/null; then
   echo "Installing zimfw"
   rm -rf .z*
