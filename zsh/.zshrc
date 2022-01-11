@@ -57,3 +57,4 @@ bindkey -M vicmd 'j' history-substring-search-down
 alias ls='ls -la'
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:/usr/local/opt/node@16/bin"
+export PATH="$PATH:$HOME/.bin"
