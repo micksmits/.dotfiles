@@ -1,5 +1,0 @@
-APP=$1
-
-if pgrep -xq -- "${APP}"; then
-  open -a $APP
-fi

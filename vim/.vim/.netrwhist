@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =3
+let g:netrw_dirhist_3='/Users/micksmits/src/primio_api_2021'
+let g:netrw_dirhist_2='/Users/micksmits/src/primio_cdk_parent_2021'
+let g:netrw_dirhist_1='/Users/micksmits/src/primio_api_2021'

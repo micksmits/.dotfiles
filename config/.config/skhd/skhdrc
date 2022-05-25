@@ -1,4 +1,5 @@
-cmd - return : open -a Terminal
-cmd - 0x1E : open -a Safari
-cmd - 0x21 : open -a Webstorm
+cmd - 0x12 : safeopen Terminal
+cmd - 0x13 : safeopen Safari
+cmd - 0x14 : safeopen WebStorm
+cmd - 0x15 : safeopen Slack
 

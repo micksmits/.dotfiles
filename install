@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 
-STOW_FOLDERS="git,config,vim,zsh"
+STOW_FOLDERS="git,config,vim,zsh,bin"
 DOTFILES=$HOME/.dotfiles
 
 pushd $DOTFILES
