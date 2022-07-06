@@ -1,16 +1,7 @@
 #!/usr/bin/env zsh
 
-STOW_FOLDERS="git,config,vim,zsh,bin"
+STOW_FOLDERS="git,zsh"
 DOTFILES=$HOME/.dotfiles
-
-pushd $DOTFILES
-for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
-do
-  echo "Removing symlink(s) for $folder"
-  stow -D $folder
-  rm -rf .*.zwc
-done
-popd
 
 pushd $HOME
 if ! which brew > /dev/null; then
