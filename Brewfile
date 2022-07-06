@@ -1,0 +1,23 @@
+tap "cmacrae/formulae"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "koekeishiya/formulae"
+
+brew "composer"
+brew "mas"
+brew "node"
+brew "stow"
+brew "tmux"
+brew "wget"
+brew "yarn"
+brew "koekeishiya/formulae/skhd"
+
+cask "discord"
+cask "docker"
+cask "postman"
+cask "slack"
+cask "mimestream"
+cask "spotify"
+

@@ -1,0 +1,30 @@
+#!/usr/bin/env zsh
+
+STOW_FOLDERS="git,zsh"
+DOTFILES=$HOME/.dotfiles
+
+pushd $HOME
+if ! which brew > /dev/null; then
+  echo "Installing zimfw"
+  rm -rf .z*
+  curl -fsSL https://raw.githubusercontent.com/zimfw/install/master/install.zsh | zsh
+  zimfw install
+  rm -rf .zimrc .zshrc .zlogin .*.zwc
+fi;
+popd
+
+pushd $DOTFILES
+if ! which brew > /dev/null; then
+  echo "Installing Homebrew"
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  brew update
+fi;
+
+brew bundle --no-lock
+
+for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
+do
+  echo "Creating symlink(s) for $folder"
+  stow $folder
+done
+popd
