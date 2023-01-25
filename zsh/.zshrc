@@ -55,6 +55,7 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 alias ls='ls -la'
+alias v='nvim'
+
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:/usr/local/opt/node@16/bin"
-export PATH="$PATH:$HOME/.bin"

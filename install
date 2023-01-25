@@ -15,7 +15,7 @@ popd
 
 pushd $DOTFILES
 if ! which brew > /dev/null; then
-  echo "Installing Homebrew"
+  echo "Installing homebrew"
   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
   brew update
 fi;
@@ -24,7 +24,7 @@ brew bundle --no-lock
 
 for folder in $(echo $STOW_FOLDERS | sed "s/,/ /g")
 do
-  echo "Creating symlink(s) for $folder"
+  echo "Creating symlink for $folder"
   stow $folder
 done
 popd
