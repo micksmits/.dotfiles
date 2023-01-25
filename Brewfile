@@ -22,7 +22,6 @@ cask "postman"
 cask "slack"
 cask "tableplus"
 cask "warp"
-cask "webstorm"
 cask "mimestream"
 
 mas "Xcode", id: 497799835
