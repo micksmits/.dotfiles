@@ -1,3 +1,1 @@
-config/.config/valet
-config/.config/xfce4
-config/.config/coc
+config/.config/nvim/plugin/packer_compiled.lua
