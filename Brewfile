@@ -31,5 +31,6 @@ cask "rectangle"
 cask "notion"
 cask "clickup"
 cask "ngrok"
+cask "visual-studio-code"
 
 mas "Xcode", id: 497799835
