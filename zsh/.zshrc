@@ -55,13 +55,6 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 
 alias ls='ls -la'
-alias v='nvim'
-alias papi='cd ~/Code/primio-api-2021'
-alias papp='cd ~/Code/primio-app-2021'
-alias pcms='cd ~/Code/primio-cms-2021'
-alias pcdk='cd ~/Code/primio-cdk-2021'
-alias bapi='cd ~/Code/bizdex-api-2022'
-alias bapp='cd ~/Code/bizdex-app-2022'
 
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 export PATH="$PATH:/usr/local/opt/node@16/bin"
